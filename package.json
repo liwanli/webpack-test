@@ -2,7 +2,6 @@
   "name": "webpack-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/liwanli/webpack-test/issues"
   },
-  "homepage": "https://github.com/liwanli/webpack-test#readme"
+  "homepage": "https://github.com/liwanli/webpack-test#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }
