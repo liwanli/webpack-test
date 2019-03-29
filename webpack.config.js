@@ -1,25 +1,22 @@
+const devConf = require('./config/webpack.dev.conf');
+const prodConf = require('./config/webpack.prod.conf')
 
-const path = require('path');
+let ENV = process.env.NODE_ENV;
+let finalConfig = {};
 
 
-
-module.exports = {
-	entry: path.resolve(__dirname,'./index.js'),
-    path: path.resolve(__dirname,'./dist'),
-	resolve:{
-
-	},
-	modules:{
-
-	},
-	loaders:{
-		rule:[{
-			test:/\.js$/,
-			loader:"babel-loader"
-		},{
-
-		}]
-	},
-	plugins:[],
-	devServer:{}
+switch(ENV){
+  case 'dev':
+    finalConfig = devConf;
+    break;
+  case 'prod':
+    finalConfig = prodConf;
+  break;
+  default:
+  break;
 }
+
+
+
+
+module.exports = finalConfig;
